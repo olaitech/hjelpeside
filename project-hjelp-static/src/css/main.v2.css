@@ -269,4 +269,21 @@ p.privacy-note {
   font-size: 0.9rem;
   opacity: 0.8;
 }
- 
+.nav a.nav-contact {
+  margin-left: 1.2rem;
+
+  padding: 12px 28px;     /* dette VIL slå gjennom nå */
+  border-radius: 999px;
+
+  background: #d2b48c;
+  color: #1a1a1a;
+
+  font-weight: 500;
+  text-decoration: none;
+
+  display: inline-block; /* viktig */
+}
+.nav a.nav-contact:hover {
+  background: #c0a080;
+  color: #000000;
+}
