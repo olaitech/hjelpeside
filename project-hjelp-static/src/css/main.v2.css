@@ -1,0 +1,267 @@
+/* =========================
+   Project hjelp — Minimalist (v2)
+   Replace whole file with this.
+========================= */
+
+/* Reset */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { margin: 0; }
+
+/* Theme */
+:root{
+  --bg: #0b0b0b;
+  --fg: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.66);
+  --faint: rgba(255,255,255,.48);
+  --line: rgba(255,255,255,.10);
+  --line2: rgba(255,255,255,.06);
+  --max: 1180px;
+}
+
+/* Base typography */
+body{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: radial-gradient(1200px 800px at 40% 30%, rgba(255,255,255,.06), transparent 60%),
+              var(--bg);
+  color: var(--fg);
+  line-height: 1.45;
+}
+
+a{ color: inherit; text-decoration: none; }
+a:hover{ color: rgba(255,255,255,.96); }
+
+.container{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* =========================
+   Header (thin line, minimalist)
+========================= */
+.site-header{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 72px;
+  z-index: 50;
+  background: rgba(11,11,11,.72);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header .container{
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand{
+  font-size: 14px;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.86);
+}
+
+.nav{
+  display: flex;
+  gap: 28px;
+  font-size: 13px;
+  color: rgba(255,255,255,.70);
+}
+
+.nav a{
+  padding: 10px 2px;
+  border-bottom: 1px solid transparent;
+}
+.nav a:hover{
+  color: rgba(255,255,255,.92);
+  border-bottom-color: rgba(255,255,255,.18);
+}
+
+/* =========================
+   Hero (like reference: big type, lots of air)
+========================= */
+.hero{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 72px; /* header height */
+}
+
+.hero-grid{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 56px;
+  align-items: center;
+  padding: 92px 0 70px;
+}
+
+.hero-copy{ min-width: 0; }
+
+.hero h1{
+  margin: 0 0 26px;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.04;
+  font-size: clamp(44px, 5.2vw, 84px);
+  color: rgba(255,255,255,.92);
+}
+
+.hero-text{
+  max-width: 58ch;
+  margin: 0 0 18px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.hero-note{
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--faint);
+}
+
+.scroll-hint{
+  display: inline-block;
+  margin-top: 38px;
+  font-size: 13px;
+  color: rgba(255,255,255,.45);
+}
+
+/* Right image (subtle, editorial) */
+.hero-media{
+  justify-self: end;
+  width: 100%;
+  max-width: 520px;
+  position: relative;
+}
+
+.hero-media img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 18px 60px rgba(0,0,0,.45);
+  opacity: .92;
+  filter: contrast(1.02) saturate(.92);
+}
+
+/* subtle inner vignette */
+.hero-media::after{
+  content:"";
+  position:absolute;
+  inset: 0;
+  border-radius: 12px;
+  pointer-events: none;
+  background: radial-gradient(120% 120% at 30% 20%, transparent 0%, rgba(0,0,0,.18) 55%, rgba(0,0,0,.28) 100%);
+}
+
+/* =========================
+   Sections (thin dividers, calm spacing)
+========================= */
+section{
+  padding: 86px 0;
+  border-top: 1px solid var(--line2);
+}
+
+section h2{
+  margin: 0 0 28px;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: rgba(255,255,255,.86);
+}
+
+/* About list with en-dash */
+.about ul{ list-style: none; padding: 0; margin: 0; }
+.about li{
+  padding-left: 18px;
+  margin: 0 0 12px;
+  position: relative;
+  color: rgba(255,255,255,.74);
+}
+.about li::before{
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: rgba(255,255,255,.35);
+}
+
+/* Services */
+.service{
+  max-width: 72ch;
+  padding: 18px 0 8px;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+.service:first-of-type{ border-top: 0; padding-top: 0; }
+
+.service h3{
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: .01em;
+  color: rgba(255,255,255,.86);
+}
+.service p{
+  margin: 0 0 14px;
+  color: rgba(255,255,255,.66);
+}
+
+/* Process */
+.process ol{ margin: 0; padding-left: 18px; color: rgba(255,255,255,.70); }
+.process li{ margin: 0 0 12px; }
+
+/* Limitation */
+.limitation p{ max-width: 72ch; margin: 0; color: rgba(255,255,255,.70); }
+
+/* FAQ */
+.faq details{
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding: 16px 0;
+}
+.faq summary{
+  cursor: pointer;
+  font-size: 14px;
+  color: rgba(255,255,255,.78);
+}
+.faq p{
+  margin: 12px 0 0;
+  max-width: 72ch;
+  color: rgba(255,255,255,.66);
+}
+
+/* Footer */
+.site-footer{
+  border-top: 1px solid var(--line);
+  padding: 28px 0;
+  color: rgba(255,255,255,.45);
+  font-size: 13px;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 900px){
+  .hero-grid{
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 72px 0 54px;
+  }
+  .hero-media{
+    justify-self: start;
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 720px){
+  .nav{ display: none; }
+  .container{ padding: 0 18px; }
+  section{ padding: 64px 0; }
+}

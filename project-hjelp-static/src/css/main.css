@@ -1,0 +1,293 @@
+/* =========================
+   Base / reset
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #0e0e0e;
+  color: #eaeaea;
+  line-height: 1.6;
+}
+
+/* =========================
+   Layout
+========================= */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* =========================
+   Header
+========================= */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(14, 14, 14, 0.9);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #1f1f1f;
+  z-index: 10;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.brand {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.nav a {
+  color: #bdbdbd;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 0.85rem;
+}
+
+.nav a:hover {
+  color: #ffffff;
+}
+
+/* =========================
+   Hero
+========================= */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 64px;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text {
+  max-width: 640px;
+  font-size: 1.05rem;
+  color: #cfcfcf;
+  margin-bottom: 1rem;
+}
+
+.hero-note {
+  font-size: 0.9rem;
+  color: #9a9a9a;
+}
+
+.scroll-hint {
+  display: inline-block;
+  margin-top: 3rem;
+  font-size: 0.8rem;
+  color: #7a7a7a;
+}
+
+/* =========================
+   Sections
+========================= */
+section {
+  padding: 6rem 0;
+  border-top: 1px solid #1f1f1f;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+/* =========================
+   About
+========================= */
+.about ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about li {
+  margin-bottom: 0.75rem;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.about li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: #777;
+}
+
+/* =========================
+   Services
+========================= */
+.service {
+  max-width: 700px;
+  margin-bottom: 2.5rem;
+}
+
+.service h3 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.service p {
+  color: #bcbcbc;
+}
+
+/* =========================
+   Process
+========================= */
+.process ol {
+  padding-left: 1.2rem;
+}
+
+.process li {
+  margin-bottom: 0.75rem;
+}
+
+/* =========================
+   Limitation
+========================= */
+.limitation p {
+  max-width: 700px;
+  color: #bdbdbd;
+}
+
+/* =========================
+   FAQ
+========================= */
+.faq details {
+  border-top: 1px solid #1f1f1f;
+  padding: 1rem 0;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.faq p {
+  margin-top: 0.75rem;
+  color: #bdbdbd;
+}
+
+/* =========================
+   Footer
+========================= */
+.site-footer {
+  border-top: 1px solid #1f1f1f;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #7a7a7a;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 800px) {
+  .nav {
+    display: none;
+  }
+
+  section {
+    padding: 4rem 0;
+  }
+}
+/* =========================
+   Hero split (text + image)
+========================= */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.hero-copy {
+  min-width: 0;
+}
+
+.hero-media {
+  justify-self: end;
+  width: 100%;
+  max-width: 520px;
+}
+
+.hero-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  opacity: 0.95;
+  filter: contrast(1.02) saturate(0.95);
+}
+
+/* subtil “gallery” følelse */
+.hero-media::before {
+  content: "";
+  position: absolute;
+}
+
+/* =========================
+   Hero split (text + image)
+========================= */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.hero-copy {
+  min-width: 0;
+}
+
+.hero-media {
+  position: relative;
+  justify-self: end;
+  width: 100%;
+  max-width: 520px;
+}
+
+.hero-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  opacity: 0.95;
+  filter: contrast(1.02) saturate(0.95);
+}
+
+@media (max-width: 700px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero-media {
+    justify-self: start;
+    max-width: 640px;
+  }
+}
