@@ -265,3 +265,8 @@ section h2{
   .container{ padding: 0 18px; }
   section{ padding: 64px 0; }
 }
+p.privacy-note {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+ 
