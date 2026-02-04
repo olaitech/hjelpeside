@@ -12,14 +12,28 @@ body { margin: 0; }
 
 /* Theme */
 :root{
-  --bg: #0b0b0b;
+  /* Base */
+  --bg: #000000;
+
+  /* Text */
   --fg: rgba(255,255,255,.92);
   --muted: rgba(255,255,255,.66);
   --faint: rgba(255,255,255,.48);
+
+  /* Lines / borders */
   --line: rgba(255,255,255,.10);
   --line2: rgba(255,255,255,.06);
+
+  /* Accent (sand) — brukes KUN til små detaljer, ikke brødtekst */
+  --accent: rgba(208, 180, 140, 0.9);
+  --accent-strong: rgba(208, 180, 140, 0.70);
+  --accent-soft: rgba(208, 180, 140, 0.22);
+  --accent-faint: rgba(208, 180, 140, 0.12);
+
+  /* Layout */
   --max: 1180px;
 }
+
 
 /* Base typography */
 body{
@@ -85,26 +99,32 @@ a:hover{ color: rgba(255,255,255,.96); }
 /* =========================
    Hero (like reference: big type, lots of air)
 ========================= */
+/* ============================
+   HERO (clean, stable, warm accent)
+   ============================ */
+
 .hero{
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
+  /* Ikke lås den hardt til vh – det er ofte kilden til “for mye luft” */
   padding-top: 72px; /* header height */
+  padding-bottom: 28px;
+  display: block;
 }
 
 .hero-grid{
   width: 100%;
   display: grid;
-  grid-template-columns: 1.2fr .8fr;
+  grid-template-columns: 1.15fr .85fr;
   gap: 56px;
   align-items: center;
-  padding: 92px 0 70px;
+
+  /* Dette er den viktigste endringen: mindre “luft” */
+  padding: 54px 0 28px;
 }
 
 .hero-copy{ min-width: 0; }
 
 .hero h1{
-  margin: 0 0 26px;
+  margin: 0 0 18px;
   font-weight: 400;
   letter-spacing: -0.035em;
   line-height: 1.04;
@@ -113,55 +133,109 @@ a:hover{ color: rgba(255,255,255,.96); }
 }
 
 .hero-text{
-  max-width: 58ch;
-  margin: 0 0 18px;
+  max-width: 60ch;
+  margin: 0 0 14px;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.65;
   color: var(--muted);
 }
 
 .hero-note{
   margin: 0;
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.65;
   color: var(--faint);
 }
 
+/* Scroll hint – varm sandtone som “knytter” til resten av siden */
 .scroll-hint{
-  display: inline-block;
-  margin-top: 38px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
   font-size: 13px;
-  color: rgba(255,255,255,.45);
+  color: rgba(240, 221, 188, 0.72); /* sand/beige */
+  letter-spacing: .02em;
 }
 
-/* Right image (subtle, editorial) */
+.scroll-hint::before{
+  content: "";
+  width: 26px;
+  height: 1px;
+  background: rgba(240, 221, 188, 0.38);
+}
+
+/* Right image (editorial + warm glow) */
 .hero-media{
   justify-self: end;
   width: 100%;
-  max-width: 520px;
+  max-width: 540px;
   position: relative;
+  isolation: isolate;
+
 }
 
+/* Warm ambient glow behind the image */
+.hero-media::before{
+  content: "";
+  position: absolute;
+  inset: -22px;
+  border-radius: 22px;
+  background:
+    radial-gradient(60% 60% at 70% 30%, var(--accent-soft), transparent 60%),
+    radial-gradient(55% 55% at 35% 75%, var(--accent-faint), transparent 60%);
+  filter: blur(14px);
+  z-index: 0;
+}
+
+
+
 .hero-media img{
+  position: relative;
+  z-index: 2;
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 12px;
+
+  border-radius: 14px;
   border: 1px solid rgba(255,255,255,.10);
+
+  /* Mer “premium” enn ren opacity */
   box-shadow: 0 18px 60px rgba(0,0,0,.45);
-  opacity: .92;
-  filter: contrast(1.02) saturate(.92);
+  filter: contrast(1.03) saturate(.92);
 }
 
-/* subtle inner vignette */
-.hero-media::after{
-  content:"";
-  position:absolute;
-  inset: 0;
-  border-radius: 12px;
-  pointer-events: none;
-  background: radial-gradient(120% 120% at 30% 20%, transparent 0%, rgba(0,0,0,.18) 55%, rgba(0,0,0,.28) 100%);
+/* Responsive: stack på mobil */
+@media (max-width: 900px){
+  .hero-grid{
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 40px 0 18px;
+  }
+
+  .hero-media{
+    justify-self: start;
+    max-width: 560px;
+  }
+
+  .scroll-hint{
+    margin-top: 18px;
+  }
 }
+
+
+/* Warm rim + lift (sand) */
+.hero-media::after{
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 14px;
+  border: 1px solid var(--accent-faint);
+  box-shadow: 0 24px 70px rgba(0,0,0,.55);
+  z-index: 1;
+  pointer-events: none;
+}
+
 
 /* =========================
    Sections (thin dividers, calm spacing)
@@ -332,7 +406,7 @@ p.privacy-note {
   left: 0;
   top: 0.55em;
   background: rgba(208, 180, 140, 0.9);
-  box-shadow: 0 0 0 4px rgba(208, 180, 140, 0.12);
+  box-shadow: 0 0 0 4px rgba(170, 127, 68, 0.12);
 }
 
 /* Dokument-mockup */
@@ -480,4 +554,213 @@ p.privacy-note {
   margin-top: 14px;
   background: rgba(208, 180, 140, 0.75);
   border-radius: 999px;
+}
+/* CASES / TYPISKE HENVENDELSER */
+
+.cases {
+  padding: 2.5rem 1.5rem 4rem;
+  background: linear-gradient(
+    to bottom,
+    #0b0b0b,
+    #000
+  );
+}
+
+.cases-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.case-box {
+  position: relative;
+  padding: 2rem;
+  border-radius: 16px;
+
+  /* Sand-tinted surface */
+  background:
+    linear-gradient(
+      180deg,
+      rgba(208, 180, 140, 0.10),
+      rgba(208, 180, 140, 0.04)
+    );
+
+  /* Warm border */
+  border: 1px solid rgba(208, 180, 140, 0.18);
+
+  /* Lift */
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  backdrop-filter: blur(6px);
+}
+
+/* Subtle inner glow */
+.case-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(
+      120% 80% at 20% 0%,
+      rgba(208, 180, 140, 0.12),
+      transparent 60%
+    );
+  pointer-events: none;
+}
+
+/* Headings */
+.case-box h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Main text */
+.case-box p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+/* Notes */
+.case-note {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.58);
+}
+
+/* Optional: subtle hover (desktop only) */
+@media (hover: hover) {
+  .case-box:hover {
+    border-color: rgba(208, 180, 140, 0.28);
+    box-shadow:
+      0 22px 64px rgba(0, 0, 0, 0.55),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+}
+/* =========================
+   HERO MEDIA — FINAL OVERRIDE (paste at very bottom)
+   Forces visible sand glow + rim without touching text
+========================= */
+
+.hero-media{
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+}
+
+/* Stronger glow so you actually SEE it */
+.hero-media::before{
+  content: "";
+  position: absolute;
+  inset: -28px;
+  border-radius: 24px;
+  background:
+    radial-gradient(60% 60% at 70% 30%, rgba(208, 180, 140, 0.34), transparent 62%),
+    radial-gradient(55% 55% at 35% 75%, rgba(208, 180, 140, 0.20), transparent 62%);
+  filter: blur(18px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Sand rim + lift (this will override any previous ::after) */
+.hero-media::after{
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 14px;
+  border: 1px solid rgba(208, 180, 140, 0.18);
+  box-shadow: 0 26px 80px rgba(0,0,0,.58);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Keep image above the effects */
+.hero-media img{
+  position: relative;
+  z-index: 2;
+}
+
+/* Prevent any parent clipping the glow */
+.hero,
+.hero-grid{
+  overflow: visible;
+}
+/* =========================
+   CASE BOXES — STRONGER SAND (override)
+========================= */
+
+.case-box{
+  background:
+    linear-gradient(
+      180deg,
+      rgba(208, 180, 140, 0.16),
+      rgba(208, 180, 140, 0.06)
+    ) !important;
+
+  border: 1px solid rgba(208, 180, 140, 0.26) !important;
+
+  box-shadow:
+    0 22px 70px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(208, 180, 140, 0.06) inset !important;
+}
+
+.case-box::before{
+  background:
+    radial-gradient(
+      120% 85% at 20% 0%,
+      rgba(208, 180, 140, 0.18),
+      transparent 62%
+    ) !important;
+}
+
+/* liten sand-aksent under overskrift */
+.case-box h3{
+  position: relative;
+}
+
+.case-box h3::after{
+  content: "";
+  display: block;
+  width: 42px;
+  height: 1px;
+  margin-top: 10px;
+  background: rgba(208, 180, 140, 0.55);
+  opacity: 0.9;
+}
+/* --- Mobile header/nav fix --- */
+@media (max-width: 720px) {
+  .site-header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+
+    /* gjør at menyen alltid er tilgjengelig på små skjermer */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding-bottom: 6px;
+  }
+
+  .nav a {
+    flex: 0 0 auto; /* ikke krymp lenkene */
+    font-size: 14px;
+  }
+
+  .nav a.nav-contact {
+    margin-left: auto; /* skyv Kontakt mot høyre */
+  }
 }
