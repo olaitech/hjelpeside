@@ -1,193 +1,180 @@
 <!DOCTYPE html>
 <html lang="no">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Google Search Console verification -->
-  <meta name="google-site-verification" content="15W2NmFW7b9irYkTdACi9slp7Kb_muAE0MhROXHspSM" />
+    <!-- Google Search Console verification -->
+    <meta
+      name="google-site-verification"
+      content="15W2NmFW7b9irYkTdACi9slp7Kb_muAE0MhROXHspSM"
+    />
 
-  <title>Hjelp til å skrive klage og forstå vedtak | Og språkbistand</title>
+    <title>Hjelp til å skrive klage og forstå vedtak | Og språkbistand</title>
 
-  <meta
-    name="description"
-    content="Hjelp til å forstå vedtak, skrive klager og rydde i brev fra offentlige og private instanser."
-  />
+    <meta
+      name="description"
+      content="Hjelp til å forstå vedtak, skrive klager og rydde i brev fra offentlige og private instanser."
+    />
 
-  <link rel="canonical" href="https://hjelpeside.vercel.app/" />
+    <link rel="canonical" href="https://hjelpeside.vercel.app/" />
 
-  <link rel="stylesheet" href="./src/css/main.v2.css?v=2" />
-  <script src="./src/js/main.js" defer></script>
-</head>
+    <!-- bump cache ved behov -->
+    <link rel="stylesheet" href="./src/css/main.v2.css?v=3" />
+    <script src="./src/js/main.js" defer></script>
+  </head>
 
   <body>
     <!-- HEADER -->
     <header class="site-header">
-      <div class="container">
+      <div class="container header-row">
         <a href="#top" class="brand">HJELPESIDE</a>
 
+        <nav class="nav" aria-label="Hovedmeny">
+          <a href="#tjenester">Tjenester</a>
+          <a href="#hvordan">Hvordan</a>
+          <a href="#faq">FAQ</a>
 
-       <nav class="nav" aria-label="Hovedmeny">
-  <a href="#tjenester">Tjenester</a>
-  <a href="#hvordan">Hvordan</a>
-  <a href="#faq">FAQ</a>
-
-  <a
-    href="mailto:kontakt.hjelpeside@proton.me?subject=Henvendelse%20via%20Hjelpeside"
-    class="nav-contact"
-  >
-    Kontakt 
-  </a>
-</nav>
-
+          <a
+            href="mailto:kontakt.hjelpeside@proton.me?subject=Henvendelse%20via%20Hjelpeside"
+            class="nav-contact"
+          >
+            Kontakt
+          </a>
+        </nav>
       </div>
     </header>
 
-   <!-- HERO -->
-<main>
-  <section class="hero" id="top">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <h1>
-          Hjelp til å forstå og formulere brev og dokumenter
-        </h1>
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="top">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1>Hjelp til å forstå og formulere brev og dokumenter</h1>
 
-        <!-- GJENKJENNELSE / LEDE -->
-        <p class="hero-lede">
-          Har du fått et brev, vedtak eller krav du ikke helt forstår – og vil svare ryddig og korrekt?
-        </p>
+            <p class="hero-lede">
+              Har du fått et brev, vedtak eller krav du ikke helt forstår – og vil
+              svare ryddig og korrekt?
+            </p>
 
-        <!-- FORKLARING -->
-        <p class="hero-text">
-          Jeg forklarer hvordan brev, vedtak og tekster er bygget opp, og hjelper med språk og struktur.
-          Hjelpen er begrenset til forståelse og formulering av tekst, ikke vurdering av rettigheter eller utfall.
-        </p>
+            <p class="hero-text">
+              Jeg forklarer hvordan brev, vedtak og tekster er bygget opp, og hjelper
+              med språk og struktur. Hjelpen er begrenset til forståelse og formulering
+              av tekst, ikke vurdering av rettigheter eller utfall.
+            </p>
 
-        <span class="scroll-hint">Scroll for mer</span>
-      </div>
+            <span class="scroll-hint">Scroll for mer</span>
+          </div>
 
-      <div class="hero-media" aria-hidden="true">
-        <img
-          src="./src/assets/images/person.jpg"
-          alt=""
-          loading="eager"
-        />
-      </div>
-    </div>
-  </section>
-  <!-- TYPISKE HENVENDELSER -->
-<section class="cases">
-  <div class="container cases-grid">
+          <div class="hero-media" aria-hidden="true">
+            <img src="./src/assets/images/person.jpg" alt="" loading="eager" />
+          </div>
+        </div>
+      </section>
 
-    <div class="case-box">
-      <h3>Brev og vedtak fra det offentlige</h3>
-      <p>
-        Har du mottatt et brev eller vedtak du ikke helt forstår?
-        Jeg hjelper med å forklare innhold, struktur og språk, slik at
-        du vet hva teksten faktisk sier.
-      </p>
-      <p class="case-note">
-        Hjelpen gjelder forståelse og formulering – ikke vurdering av rettigheter eller utfall.
-      </p>
-    </div>
+      <!-- TYPISKE HENVENDELSER -->
+      <section class="cases" aria-label="Typiske henvendelser">
+        <div class="container">
+          <div class="cases-grid">
+            <article class="case-card">
+              <h3>Brev og vedtak fra det offentlige</h3>
+              <p>
+                Har du mottatt et brev eller vedtak du ikke helt forstår? Jeg hjelper
+                med å forklare innhold, struktur og språk, slik at du vet hva teksten
+                faktisk sier.
+              </p>
+              <p class="case-note">
+                Hjelpen gjelder forståelse og formulering – ikke vurdering av rettigheter
+                eller utfall.
+              </p>
+            </article>
 
-    <div class="case-box">
-      <h3>Bank, forsikring og økonomi</h3>
-      <p>
-        Mange opplever brev fra bank eller forsikringsselskap som uklare
-        eller vanskelig formulert. Jeg hjelper med å rydde i teksten og
-        formulere saklige og presise svar.
-      </p>
-      <p class="case-note">
-        Jeg tolker språk og struktur, ikke vilkår eller juridisk betydning.
-      </p>
-    </div>
+            <article class="case-card">
+              <h3>Bank, forsikring og økonomi</h3>
+              <p>
+                Mange opplever brev fra bank eller forsikringsselskap som uklare eller
+                vanskelig formulert. Jeg hjelper med å rydde i teksten og formulere
+                saklige og presise svar.
+              </p>
+              <p class="case-note">
+                Jeg tolker språk og struktur, ikke vilkår eller juridisk betydning.
+              </p>
+            </article>
 
-    <div class="case-box">
-      <h3>Svar, klager og oppfølging</h3>
-      <p>
-        Hvis du skal svare på et brev eller følge opp en sak, kan jeg
-        hjelpe med å strukturere teksten og gjøre formuleringen tydelig,
-        rolig og ryddig.
-      </p>
-      <p class="case-note">
-        Du beholder innholdet – jeg hjelper med form og oppbygning.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-</main>
-
+            <article class="case-card">
+              <h3>Svar, klager og oppfølging</h3>
+              <p>
+                Hvis du skal svare på et brev eller følge opp en sak, kan jeg hjelpe med
+                å strukturere teksten og gjøre formuleringen tydelig, rolig og ryddig.
+              </p>
+              <p class="case-note">
+                Du beholder innholdet – jeg hjelper med form og oppbygning.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
       <!-- OM / HVA -->
-     <section class="about" id="hvordan">
+      <section class="about" id="hvordan">
+        <div class="container about-grid">
+          <div class="about-media" aria-hidden="true">
+            <div class="doc-mock">
+              <div class="doc-top">
+                <span class="doc-chip">VEDTAK</span>
+                <span class="doc-date">Dato: 03.02.2026</span>
+              </div>
 
-  
-  <div class="container about-grid">
-    <div class="about-media" aria-hidden="true">
-      <div class="doc-mock">
-        <div class="doc-top">
-          <span class="doc-chip">VEDTAK</span>
-          <span class="doc-date">Dato: 03.02.2026</span>
+              <div class="doc-title">Sammendrag</div>
+
+              <div class="doc-lines">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+
+              <div class="doc-stamp">MOTTATT</div>
+
+              <div class="doc-footer">
+                <span>Referanse: 2026/XXXX</span>
+                <span>Side 1 av 2</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-copy">
+            <h2>Hva denne hjelpen går ut på</h2>
+
+            <p>
+              Denne hjelpen passer når du trenger å forstå innholdet i et brev eller vedtak,
+              og ønsker å formulere et rolig og ryddig svar.
+            </p>
+
+            <ul class="about-list">
+              <li>Forklaring av innhold i brev og vedtak</li>
+              <li>Strukturering av uoversiktlige dokumenter</li>
+              <li>Språklig opprydding og presisering</li>
+              <li>Nøktern og rolig formulering</li>
+            </ul>
+          </div>
         </div>
-
-        <div class="doc-title">Sammendrag</div>
-
-        <div class="doc-lines">
-          <span></span><span></span><span></span><span></span><span></span>
-        </div>
-
-        <div class="doc-stamp">MOTTATT</div>
-
-        <div class="doc-footer">
-          <span>Referanse: 2026/XXXX</span>
-          <span>Side 1 av 2</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="about-copy">
-      <h2>Hva denne hjelpen går ut på</h2>
-
-      <p>
-        Denne hjelpen passer når du trenger å forstå innholdet i et brev eller vedtak,
-        og ønsker å formulere et rolig og ryddig svar.
-      </p>
-
-      <ul class="about-list">
-        <li>Forklaring av innhold i brev og vedtak</li>
-        <li>Strukturering av uoversiktlige dokumenter</li>
-        <li>Språklig opprydding og presisering</li>
-        <li>Nøktern og rolig formulering</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-
+      </section>
 
       <!-- TJENESTER -->
       <section class="services" id="tjenester">
         <div class="container">
-         <h2><a href="#faq">Tjenester</a></h2>
-
+          <h2>Tjenester</h2>
 
           <div class="service">
             <h3>Forklaring av brev og vedtak</h3>
             <p>
-              Gjennomgang av innhold med fokus på språk, struktur og forståelse. Du får en tydelig oppsummering av hva teksten sier, 
-              og hva som faktisk etterspørres.
-              Brukes ofte når teksten er lang, uklar eller full av formelle formuleringer.
+              Gjennomgang av innhold med fokus på språk, struktur og forståelse. Du får en tydelig oppsummering av hva teksten sier,
+              og hva som faktisk etterspørres. Brukes ofte når teksten er lang, uklar eller full av formelle formuleringer.
             </p>
           </div>
 
           <div class="service">
             <h3>Omskriving og språkvask</h3>
             <p>
-              Forbedring av tekst uten å endre budskap eller intensjon. Målet er å gjøre teksten klarere, 
-              roligere og mer presis.
+              Forbedring av tekst uten å endre budskap eller intensjon. Målet er å gjøre teksten klarere, roligere og mer presis.
               Aktuelt når du vil svare saklig eller sende inn noe som skal fremstå ryddig og profesjonelt.
             </p>
           </div>
@@ -195,8 +182,7 @@
           <div class="service">
             <h3>Struktur og sammendrag</h3>
             <p>
-              Systematisering av lengre eller uoversiktlige saker: rekkefølge, avsnitt, punktliste, 
-              og en kort oppsummering som gjør det enklere å jobbe videre.
+              Systematisering av lengre eller uoversiktlige saker: rekkefølge, avsnitt, punktliste, og en kort oppsummering som gjør det enklere å jobbe videre.
               Nyttig når du har mange dokumenter eller mye tekst og trenger oversikt.
             </p>
           </div>
@@ -204,8 +190,7 @@
           <div class="service">
             <h3>Forberedelse av oppfølging</h3>
             <p>
-              Utkast basert på dine punkter og dokumenter. Nøkternt språk, tydelig struktur og en form 
-              som passer profesjonell kommunikasjon.
+              Utkast basert på dine punkter og dokumenter. Nøkternt språk, tydelig struktur og en form som passer profesjonell kommunikasjon.
               Brukes ofte før du sender en oppfølging i e-dialog eller på e-post.
             </p>
           </div>
@@ -213,8 +198,7 @@
           <div class="service">
             <h3>Kvalitetssjekk før innsending</h3>
             <p>
-              Gjennomgang av tekst før innsending: tydelighet, struktur, tone 
-              og eventuelle uklarheter som kan misforstås.
+              Gjennomgang av tekst før innsending: tydelighet, struktur, tone og eventuelle uklarheter som kan misforstås.
               For deg som vil være sikker på at teksten er ryddig og lett å lese før du sender den.
             </p>
           </div>
@@ -232,226 +216,225 @@
             <li>Ved behov sender jeg et enkelt elektronisk skjema på e-post som du kan fylle ut.</li>
             <li>Du får en tydelig leveranse: oppsummering + struktur + forslag til tekst.</li>
           </ol>
-          <p class="privacy-note">
-               Opplysninger og dokumenter behandles konfidensielt og brukes kun i arbeidet med din henvendelse,
-               Og du deler kun det som er nødvendig, og informasjonen brukes ikke til andre formål.
-</p>
-        </div>
-      </section>
 
-      <!-- Viktig å vite før du sender inn brev, klage eller dokumenter -->
-      <section class="limitation">
-        <div class="container">
-          <h2>Viktig å vite før du sender inn brev, klage eller dokumenter</h2>
-          <p>
-            Denne hjelpen gjelder forståelse, struktur og formulering av tekst, som brev, vedtak,
-klager og andre dokumenter. Jeg gir ikke juridiske råd, vurderer ikke rettigheter
-og tar ikke stilling til hvilket utfall en sak kan få. Hensikten er å gjøre teksten
-tydeligere, roligere og mer presis før innsending.
+          <p class="privacy-note">
+            Opplysninger og dokumenter behandles konfidensielt og brukes kun i arbeidet med din henvendelse.
+            Du deler kun det som er nødvendig, og informasjonen brukes ikke til andre formål.
           </p>
         </div>
       </section>
 
-     <!-- FAQ -->
-<section class="faq" id="faq">
-  <div class="container">
-    <h2>Ofte stilte spørsmål</h2>
+      <!-- Viktig å vite -->
+      <section class="limitation" id="viktig">
+        <div class="container">
+          <h2>Viktig å vite før du sender inn brev, klage eller dokumenter</h2>
+          <p>
+            Denne hjelpen gjelder forståelse, struktur og formulering av tekst, som brev, vedtak, klager og andre dokumenter.
+            Jeg gir ikke juridiske råd, vurderer ikke rettigheter og tar ikke stilling til hvilket utfall en sak kan få.
+            Hensikten er å gjøre teksten tydeligere, roligere og mer presis før innsending.
+          </p>
+        </div>
+      </section>
 
-    <details open>
-      <summary>Hva gjør jeg hvis jeg ikke forstår et brev fra det offentlige?</summary>
-      <p>
-        Du bør først lese brevet nøye og identifisere hva som faktisk etterspørres eller besluttes. 
-        Hvis språket er uklart eller vanskelig å tolke, kan det være nyttig å få hjelp til å forklare innholdet,
-        rydde i informasjonen og strukturere et eventuelt svar. Målet er å forstå brevet før du tar stilling til videre oppfølging eller innsending.
-      </p>
-    </details>
+      <!-- BILDE (rett under "Viktig å vite", før FAQ) -->
+      <section class="brand-image" aria-label="Illustrasjon">
+        <div class="container brand-image-wrap">
+          <figure class="brand-figure">
+            <img
+              src="./src/assets/images/hamonazaryan1-notebook-2386034_1280.jpg"
+              alt="Illustrasjon: skrivebord med PC og notatbok"
+              loading="lazy"
+            />
+            <figcaption>
+              En rolig, ryddig tekst gjør det enklere å bli forstått – og enklere å følge opp saken.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
 
-    <details>
-      <summary>Kan du hjelpe meg å forstå brev og vedtak fra NAV?</summary>
-      <p>
-        Ja. Jeg kan hjelpe med å forklare brev og vedtak, strukturere dokumentasjon
-        og rydde i tekst knyttet til NAV-saker. Hjelpen er språklig og strukturell,
-        ikke juridisk.
-      </p>
-    </details>
+      <!-- FAQ -->
+      <section class="faq" id="faq">
+        <div class="container">
+          <h2>Ofte stilte spørsmål</h2>
 
-    <details>
-      <summary>Kan du forklare hva et brev fra Skatteetaten betyr?</summary>
-      <p>
-        Ja. Jeg kan hjelpe med å gjøre innholdet i brev fra Skatteetaten mer forståelig,
-        forklare hva som etterspørres, og strukturere eventuelle svar eller redegjørelser.
-      </p>
-    </details>
+          <details open>
+            <summary>Hva gjør jeg hvis jeg ikke forstår et brev fra det offentlige?</summary>
+            <p>
+              Du bør først lese brevet nøye og identifisere hva som faktisk etterspørres eller besluttes.
+              Hvis språket er uklart eller vanskelig å tolke, kan det være nyttig å få hjelp til å forklare innholdet,
+              rydde i informasjonen og strukturere et eventuelt svar. Målet er å forstå brevet før du tar stilling til videre oppfølging.
+            </p>
+          </details>
 
-    <details>
-      <summary>Kan du hjelpe meg å forstå meldinger og vedtak fra helsevesenet?</summary>
-      <p>
-        Ja. Jeg kan forklare innhold i meldinger, vedtak og svar fra helsevesenet,
-        og hjelpe med å formulere ryddige og saklige oppfølgingsmeldinger.
-      </p>
-    </details>
+          <details>
+            <summary>Kan du hjelpe meg å forstå brev og vedtak fra NAV?</summary>
+            <p>
+              Ja. Jeg kan hjelpe med å forklare brev og vedtak, strukturere dokumentasjon og rydde i tekst knyttet til NAV-saker.
+              Hjelpen er språklig og strukturell, ikke juridisk.
+            </p>
+          </details>
 
-    <details>
-      <summary>Kan du hjelpe med å formulere svar til kommunen?</summary>
-      <p>
-        Ja. Jeg kan bistå med å strukturere og formulere tekst i saker som gjelder
-        kommune, for eksempel innen skole, barnehage, byggesak eller andre kommunale tjenester.
-      </p>
-    </details>
+          <details>
+            <summary>Kan du forklare hva et brev fra Skatteetaten betyr?</summary>
+            <p>
+              Ja. Jeg kan hjelpe med å gjøre innholdet i brev fra Skatteetaten mer forståelig,
+              forklare hva som etterspørres, og strukturere eventuelle svar eller redegjørelser.
+            </p>
+          </details>
 
-    <details>
-      <summary>Kan du forklare brev og varsler fra Statens vegvesen?</summary>
-      <p>
-        Ja. Jeg kan forklare innhold i brev og varsler, og hjelpe med å formulere
-        ryddige og presise svar knyttet til førerkort, kjøretøy eller gebyrer.
-      </p>
-    </details>
+          <details>
+            <summary>Kan du hjelpe meg å forstå meldinger og vedtak fra helsevesenet?</summary>
+            <p>
+              Ja. Jeg kan forklare innhold i meldinger, vedtak og svar fra helsevesenet,
+              og hjelpe med å formulere ryddige og saklige oppfølgingsmeldinger.
+            </p>
+          </details>
 
-    <details>
-      <summary>Kan du hjelpe meg å forstå meldinger og vedtak fra Lånekassen?</summary>
-      <p>
-        Ja. Jeg kan hjelpe med å forklare meldinger og vedtak fra Lånekassen,
-        samt strukturere søknader eller henvendelser på en tydelig måte.
-      </p>
-    </details>
+          <details>
+            <summary>Kan du hjelpe med å formulere svar til kommunen?</summary>
+            <p>
+              Ja. Jeg kan bistå med å strukturere og formulere tekst i saker som gjelder kommune,
+              for eksempel innen skole, barnehage, byggesak eller andre kommunale tjenester.
+            </p>
+          </details>
 
-    <details>
-      <summary>Kan du hjelpe med å skrive en henvendelse til Politiet?</summary>
-      <p>
-        Ja. Jeg kan hjelpe med å formulere saklige og ryddige henvendelser,
-        samt forklare innhold i brev og varsler der språket oppleves uklart.
-      </p>
-    </details>
+          <details>
+            <summary>Kan du forklare brev og varsler fra Statens vegvesen?</summary>
+            <p>
+              Ja. Jeg kan forklare innhold i brev og varsler, og hjelpe med å formulere ryddige og presise svar
+              knyttet til førerkort, kjøretøy eller gebyrer.
+            </p>
+          </details>
 
-    <details>
-      <summary>Kan du hjelpe med skole- og utdanningssaker jeg ikke forstår?</summary>
-      <p>
-        Ja. Jeg kan bistå med å strukturere og forklare dokumenter og vedtak
-        knyttet til skole og utdanning, og hjelpe med å formulere oppfølgingstekst.
-      </p>
-    </details>
+          <details>
+            <summary>Kan du hjelpe meg å forstå meldinger og vedtak fra Lånekassen?</summary>
+            <p>
+              Ja. Jeg kan hjelpe med å forklare meldinger og vedtak fra Lånekassen,
+              samt strukturere søknader eller henvendelser på en tydelig måte.
+            </p>
+          </details>
 
-    <details>
-      <summary>Kan du forklare vedtak og brev, eller søknader til eller fra Husbanken?</summary>
-      <p>
-        Ja. Jeg kan forklare vedtak og brev, samt hjelpe med å strukturere
-        dokumentasjon og skriftlige henvendelser knyttet til lån, refinansiering og boligordninger.
-      </p>
-    </details>
+          <details>
+            <summary>Kan du hjelpe med å skrive en henvendelse til Politiet?</summary>
+            <p>
+              Ja. Jeg kan hjelpe med å formulere saklige og ryddige henvendelser,
+              samt forklare innhold i brev og varsler der språket oppleves uklart.
+            </p>
+          </details>
 
-    <details>
-      <summary>Kan du hjelpe meg å forstå vedtak eller søknader til Norsk pasientskadeerstatning (NPE)?</summary>
-      <p>
-        Ja. Jeg kan hjelpe med å strukturere informasjon, forklare innhold i vedtak
-        og formulere søknader eller tilleggsopplysninger. Jeg vurderer ikke rettigheter
-        eller sannsynlighet for erstatning. Et erstatningskrav kan bli foreldet dersom det ikke sendes innen
-        bestemte tidsfrister. Det er derfor viktig å handle i tide. Jeg kan
-        bistå med å strukturere og formulere dokumentasjon og tekst før det blir for gammelt,
-        men kan ikke vurdere foreldelse juridisk.
-      </p>
-    </details>
+          <details>
+            <summary>Kan du hjelpe med skole- og utdanningssaker jeg ikke forstår?</summary>
+            <p>
+              Ja. Jeg kan bistå med å strukturere og forklare dokumenter og vedtak knyttet til skole og utdanning,
+              og hjelpe med å formulere oppfølgingstekst.
+            </p>
+          </details>
 
-    <details>
-      <summary>Gir du juridiske råd eller vurderer sannsynlig utfall av en sak?</summary>
-      <p>
-        Nei. Tjenesten gir ikke juridiske råd og vurderer ikke
-        sannsynlighet for vedtak eller utfall. Hjelpen er begrenset til språk,
-        struktur og forståelse. Tjenesten er ment som språklig og strukturell hjelp, uavhengig av videre oppfølging
-      </p>
-    </details>
+          <details>
+            <summary>Kan du forklare vedtak og brev, eller søknader til eller fra Husbanken?</summary>
+            <p>
+              Ja. Jeg kan forklare vedtak og brev, samt hjelpe med å strukturere dokumentasjon og skriftlige henvendelser
+              knyttet til lån, refinansiering og boligordninger.
+            </p>
+          </details>
 
-    <details>
-      <summary>Kan du hjelpe med Forbrukerrådet?</summary>
-      <p>
-        Ja. Jeg kan forklare vedtak og brev, samt hjelpe med å strukturere
-        dokumentasjon og skriftlige henvendelser knyttet til forbrukersaker.
-      </p>
-    </details>
+          <details>
+            <summary>Kan du hjelpe meg å forstå vedtak eller søknader til Norsk pasientskadeerstatning (NPE)?</summary>
+            <p>
+              Ja. Jeg kan hjelpe med å strukturere informasjon, forklare innhold i vedtak og formulere søknader eller tilleggsopplysninger.
+              Jeg vurderer ikke rettigheter eller sannsynlighet for erstatning.
+            </p>
+          </details>
 
-    <details>
-      <summary>Hva koster tjenesten?</summary>
-      <p>
-        Pris avhenger av omfang og hva du ønsker hjelp med.
-        Enkle oppgaver starter normalt fra 500 kr, mens mer omfattende saker prises etter avtale.
-        Du får alltid et prisestimat før arbeidet starter.
+          <details>
+            <summary>Gir du juridiske råd eller vurderer sannsynlig utfall av en sak?</summary>
+            <p>
+              Nei. Tjenesten gir ikke juridiske råd og vurderer ikke sannsynlighet for vedtak eller utfall.
+              Hjelpen er begrenset til språk, struktur og forståelse.
+            </p>
+          </details>
 
-       Ved saker som omfatter mange dokumenter (for eksempel 20 eller flere), 
-       kan det være nødvendig å avklare omfang og struktur i dialog før endelig pris fastsettes.
-      </p>
-    </details>
+          <details>
+            <summary>Kan du hjelpe med Forbrukerrådet?</summary>
+            <p>
+              Ja. Jeg kan forklare vedtak og brev, samt hjelpe med å strukturere dokumentasjon og skriftlige henvendelser knyttet til forbrukersaker.
+            </p>
+          </details>
 
-    <details>
-      <summary>Tilbyr du gratis vurdering eller gjennomgang?</summary>
-      <p>
-        Nei.
-       Når du tar kontakt og sender inn tekst eller dokumenter, regnes dette som grunnlag for betalt arbeid.
-       Du mottar alltid et prisestimat før oppstart, og kan velge å ikke gå videre dersom det ikke passer. 
-      </p>
-    </details>
+          <details>
+            <summary>Hva koster tjenesten?</summary>
+            <p>
+              Pris avhenger av omfang og hva du ønsker hjelp med. Enkle oppgaver starter normalt fra 500 kr,
+              mens mer omfattende saker prises etter avtale. Du får alltid et prisestimat før arbeidet starter.
+              Ved saker som omfatter mange dokumenter kan det være nødvendig å avklare omfang og struktur i dialog før endelig pris fastsettes.
+            </p>
+          </details>
 
-  </div>
-</section>
-<footer class="w-full border-t border-neutral-200/20 mt-14">
-  <div class="max-w-6xl mx-auto px-4 py-5 flex flex-col md:flex-row justify-between gap-5 text-sm text-neutral-400">
+          <details>
+            <summary>Tilbyr du gratis vurdering eller gjennomgang?</summary>
+            <p>
+              Nei. Når du tar kontakt og sender inn tekst eller dokumenter, regnes dette som grunnlag for betalt arbeid.
+              Du mottar alltid et prisestimat før oppstart, og kan velge å ikke gå videre dersom det ikke passer.
+            </p>
+          </details>
+        </div>
+      </section>
 
-    <section class="background-card">
-  <details>
-    <summary>Bakgrunn for tjenesten</summary>
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <div class="container footer-grid">
+          <section class="background-card">
+            <details>
+              <summary>Bakgrunn for tjenesten</summary>
 
-    <div class="background-card__content">
-      <p>
-        Bakgrunnen for tjenesten er sammensatt.
-      </p>
+              <div class="background-card__content">
+                <p>Bakgrunnen for tjenesten er sammensatt.</p>
 
-      <p>
-        Jeg har tidligere hatt lederansvar for over hundre ansatte, med ansvar for struktur,
-        kommunikasjon og formelle prosesser. Dette ga tidlig innsikt i hvordan saker behandles,
-        vurderes og følges opp innenfor etablerte systemer.
-      </p>
+                <p>
+                  Jeg har tidligere hatt lederansvar for over hundre ansatte, med ansvar for struktur,
+                  kommunikasjon og formelle prosesser. Dette ga tidlig innsikt i hvordan saker behandles,
+                  vurderes og følges opp innenfor etablerte systemer.
+                </p>
 
-      <p>
-        Senere førte sykdom til et skifte i livssituasjon og rolle. Erfaringen med å møte
-        offentlige etater, banker og forsikringsselskaper fra mottakersiden ga et nytt
-        perspektiv på hvor krevende språket og strukturen i slike prosesser kan oppleves.
-      </p>
+                <p>
+                  Senere førte sykdom til et skifte i livssituasjon og rolle. Erfaringen med å møte
+                  offentlige etater, banker og forsikringsselskaper fra mottakersiden ga et nytt
+                  perspektiv på hvor krevende språket og strukturen i slike prosesser kan oppleves.
+                </p>
 
-      <p>
-        Over tid har disse erfaringene blitt brukt til å bygge kompetanse i å forstå,
-        strukturere og tydeliggjøre tekst – med fokus på oversikt, presisjon og ro i
-        kommunikasjonen.
-      </p>
+                <p>
+                  Over tid har disse erfaringene blitt brukt til å bygge kompetanse i å forstå,
+                  strukturere og tydeliggjøre tekst – med fokus på oversikt, presisjon og ro i
+                  kommunikasjonen.
+                </p>
 
-      <p>
-        Denne tjenesten er et resultat av den samlede erfaringen, sett fra begge sider
-        av bordet.
-      </p>
+                <p>Denne tjenesten er et resultat av den samlede erfaringen, sett fra begge sider av bordet.</p>
 
-      <p class="background-card__disclaimer">
-        Tjenesten omfatter språklig gjennomgang, strukturering og forklaring av tekst.
-        Det gis ikke juridisk rådgivning eller vurdering av rettigheter eller utfall.
-      </p>
-    </div>
-  </details>
-</section>
+                <p class="background-card__disclaimer">
+                  Tjenesten omfatter språklig gjennomgang, strukturering og forklaring av tekst.
+                  Det gis ikke juridisk rådgivning eller vurdering av rettigheter eller utfall.
+                </p>
+              </div>
+            </details>
+          </section>
 
-    <!-- Venstre -->
-    <div>
-      © Hjelpeside
-    </div>
+          <div class="footer-col">
+            <div class="footer-title">© Hjelpeside</div>
+            <div class="footer-muted">Språklig og strukturell hjelp. Ikke juridisk rådgivning.</div>
+          </div>
 
-    <!-- Midten -->
-    <div class="max-w-md">
-      <strong class="block text-neutral-300 mb-1">Om tjenesten</strong>
-      Språklig og strukturell hjelp for privatpersoner som ønsker å forstå og formulere
-      skriftlig kommunikasjon på en klar og nøktern måte.
-    </div>
+          <div class="footer-col">
+            <div class="footer-title">Om tjenesten</div>
+            <div class="footer-muted">
+              For privatpersoner som ønsker å forstå og formulere skriftlig kommunikasjon på en klar og nøktern måte.
+            </div>
+          </div>
 
-    <!-- Høyre -->
-    <div>
-      <a href="/personvern" class="hover:text-neutral-200 underline">
-        Personvern
-      </a>
-    </div>
-
-  </div>
-</footer>
+          <div class="footer-col footer-right">
+            <a href="/personvern" class="footer-link">Personvern</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
